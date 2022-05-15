@@ -44,7 +44,7 @@ public class CreateTransactionController {
 
         if( existParentId && Objects.isNull(transactionParent) )
             throw new TransactionNotFoundException(
-                    String.format("Not fount Transaction for ID: %s", transactionRequest.getParentId())
+                    String.format("Not found Transaction for ID: %s", transactionRequest.getParentId())
             );
 
         createTransactionService.createTransaction(
