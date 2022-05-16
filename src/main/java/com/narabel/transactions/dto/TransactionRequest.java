@@ -1,5 +1,6 @@
 package com.narabel.transactions.dto;
 
+import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
@@ -18,5 +19,6 @@ public class TransactionRequest {
     @NotEmpty(message = "Type must not be Empty")
     private String type;
 
+    @JsonProperty("parent_id")
     private Long parentId;
 }
