@@ -1,3 +1,4 @@
+DELETE FROM transactions;
 INSERT INTO transactions (id, amount, type, parent_id)
 VALUES (1, 15.5, 'test', null);
 INSERT INTO transactions (id, amount, type, parent_id)

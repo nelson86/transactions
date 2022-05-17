@@ -10,4 +10,6 @@ import java.util.List;
 public interface TransactionJpaRepository extends JpaRepository<Transaction, Long> {
 
     List<Transaction> findByType(String type);
+    List<Transaction> findByParentIn(List<Transaction> transaction);
+
 }
