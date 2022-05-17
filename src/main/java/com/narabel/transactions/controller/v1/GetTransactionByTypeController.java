@@ -1,6 +1,7 @@
 package com.narabel.transactions.controller.v1;
 
 import com.narabel.transactions.service.v1.GetTransactionByTypeService;
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,6 +19,7 @@ public class GetTransactionByTypeController {
     @Autowired
     private GetTransactionByTypeService service;
 
+    @Operation(summary = "Filter all transactions by Type")
     @GetMapping("/types/{type}")
     public List<Long> createTransaction(
             @PathVariable String type

@@ -5,6 +5,7 @@ import com.narabel.transactions.entity.Transaction;
 import com.narabel.transactions.exception.TransactionNotFoundException;
 import com.narabel.transactions.service.v1.CreateTransactionService;
 import com.narabel.transactions.service.v1.FindTransactionByIdService;
+import io.swagger.v3.oas.annotations.Operation;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -31,6 +32,7 @@ public class CreateTransactionController {
     @Autowired
     private FindTransactionByIdService findTransactionByIdService;
 
+    @Operation(summary = "Creation of Transaction")
     @PutMapping("/{transactionId}")
     public ResponseEntity<?> createTransaction(
             @PathVariable Long transactionId,
